@@ -1,0 +1,53 @@
+
+services:
+  postgres:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: yoummday_db_container
+    hostname: postgres_db
+    ports:
+      - '5432:5432'
+    env_file:
+      - ./backend/.env_backend
+    volumes:
+      - basic_auth_postgres:/var/lib/postgresql/data/
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: yoummday_backend_container
+    hostname: backend_server
+    env_file:
+      - ./backend/.env_backend
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - postgres
+    command: >
+      sh -c "./wait-for-it.sh postgres 5432 -- 
+      && python3 manage.py makemigrations 
+      && python3 manage.py migrate 
+      && python3 manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: yoummday_frontend_container
+    hostname: frontend_server
+    ports:
+      - '80:80'
+
+    volumes:
+      - ./frontend:/app/frontend
+
+    depends_on:
+      - backend
+volumes:
+  basic_auth_postgres:
+
+

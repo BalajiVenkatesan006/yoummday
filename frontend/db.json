@@ -1,0 +1,165 @@
+{
+  "callflow-configs": [
+    {
+      "id": "d1f9",
+      "name": "callflow1",
+      "flow_data": [
+        {
+          "id": "step-1",
+          "name": "step1",
+          "description": "asdasdsa",
+          "phrases": [
+            "asdasd",
+            "adasd",
+            "asdasdas"
+          ],
+          "parent": null
+        },
+        {
+          "id": "step-2",
+          "name": "step2",
+          "description": "asdasdas",
+          "phrases": [
+            "dasdaadasd",
+            "adasd",
+            "asdasd"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-3",
+          "name": "step2a",
+          "description": "asdasd",
+          "phrases": [
+            "asdas",
+            "asdasd",
+            "asdasd"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-4",
+          "name": "step3",
+          "description": "asdasd",
+          "phrases": [
+            "asda",
+            "asdasd",
+            "asdasdsd"
+          ],
+          "parent": "step-2"
+        },
+        {
+          "id": "step-5",
+          "name": "step3a",
+          "description": "sdsdfsd",
+          "phrases": [
+            "fsdfsdf",
+            "sdsd",
+            "fsdfsdf"
+          ],
+          "parent": "step-2"
+        }
+      ]
+    },
+    {
+      "id": "22cb",
+      "name": "callflow2",
+      "flow_data": [
+        {
+          "id": "step-1",
+          "name": "step1",
+          "description": "asdasd",
+          "phrases": [
+            "sdasdasd",
+            "asdasd",
+            "asdasd"
+          ],
+          "parent": null
+        },
+        {
+          "id": "step-2",
+          "name": "step2",
+          "description": "asdadasdasd",
+          "phrases": [
+            "asada",
+            "sdasd",
+            "asd",
+            "adsad"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-3",
+          "name": "step2a",
+          "description": "asdasd",
+          "phrases": [
+            "asdasdasd",
+            "adsad",
+            "asdasdsad"
+          ],
+          "parent": "step-1"
+        }
+      ]
+    },
+    {
+      "id": "2b3e",
+      "name": "callflow3",
+      "flow_data": [
+        {
+          "id": "step-1",
+          "name": "step1",
+          "description": "asdasdasd",
+          "phrases": [
+            "asdasdasd",
+            "adas",
+            "dasdasd"
+          ],
+          "parent": null
+        },
+        {
+          "id": "step-2",
+          "name": "step2",
+          "description": "asdadad",
+          "phrases": [
+            "asdasd",
+            "asda",
+            "sdas",
+            "dasd"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-3",
+          "name": "step2a",
+          "description": "adasd",
+          "phrases": [
+            "asdasdsa",
+            "asdas",
+            "dasdasd"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-4",
+          "name": "step2b",
+          "description": "asdasdasd",
+          "phrases": [
+            "asdasdsads"
+          ],
+          "parent": "step-1"
+        },
+        {
+          "id": "step-5",
+          "name": "step3",
+          "description": "asdasd",
+          "phrases": [
+            "asdasdasd",
+            "asdasd",
+            "asdasd"
+          ],
+          "parent": "step-4"
+        }
+      ]
+    }
+  ]
+}
