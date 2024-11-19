@@ -114,6 +114,15 @@ const Home: React.FC = () => {
     setParentStep('');
   };
 
+  const handleCloseFlow = ()=> {
+    setStepName('');
+    setDescription('');
+    setPhrases('');
+    setParentStep('');
+    setFlowName('');
+    setCurrentFlow([]);
+    setConfigOpen(false);
+  }
   const handleSaveFlow = async () => {
     const hierarchicalFlow = { name: flowName, flow_data: currentFlow };
 
@@ -257,7 +266,7 @@ const Home: React.FC = () => {
             </TableContainer>
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => setConfigOpen(false)} color="secondary">
+            <Button onClick={handleCloseFlow} color="secondary">
               Cancel
             </Button>
             <Button onClick={handleSaveFlow} color="primary">

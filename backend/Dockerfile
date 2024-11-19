@@ -21,5 +21,4 @@ COPY . /app/backend/
 # Add bash for script execution
 RUN apk add --no-cache bash
 
-# Run migrations and start the server
-# CMD ["sh", "-c", "python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000"]
+
