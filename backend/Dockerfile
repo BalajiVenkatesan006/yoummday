@@ -18,6 +18,11 @@ RUN apk add --virtual .build-deps --no-cache postgresql-dev gcc python3-dev musl
 # Copy project files
 COPY . /app/backend/
 
+COPY wait-for-it.sh /app/backend/
+
+RUN chmod +x /app/backend/wait-for-it.sh
+
+RUN ls -l /app/backend
 # Add bash for script execution
 RUN apk add --no-cache bash
 

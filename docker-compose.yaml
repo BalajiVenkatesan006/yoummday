@@ -23,8 +23,6 @@ services:
       - ./backend/.env_backend
     ports:
       - '8000:8000'
-    volumes:
-      - ./backend:/app/backend
     depends_on:
       - postgres
     command: >
